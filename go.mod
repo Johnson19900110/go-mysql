@@ -1,4 +1,4 @@
-module github.com/siddontang/go-mysql
+module github.com/Johnson19900110/go-mysql
 
 require (
 	github.com/BurntSushi/toml v0.3.1
