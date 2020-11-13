@@ -9,8 +9,8 @@ import (
 	"crypto/tls"
 	"fmt"
 
+	. "github.com/Johnson19900110/go-mysql/mysql"
 	"github.com/pingcap/errors"
-	. "github.com/siddontang/go-mysql/mysql"
 )
 
 var ErrAccessDenied = errors.New("access denied")

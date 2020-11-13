@@ -12,14 +12,14 @@ import (
 	"sync/atomic"
 	"time"
 
+	"github.com/Johnson19900110/go-mysql/client"
+	"github.com/Johnson19900110/go-mysql/dump"
+	"github.com/Johnson19900110/go-mysql/mysql"
+	"github.com/Johnson19900110/go-mysql/replication"
+	"github.com/Johnson19900110/go-mysql/schema"
 	"github.com/pingcap/errors"
 	"github.com/pingcap/parser"
 	"github.com/siddontang/go-log/log"
-	"github.com/siddontang/go-mysql/client"
-	"github.com/siddontang/go-mysql/dump"
-	"github.com/siddontang/go-mysql/mysql"
-	"github.com/siddontang/go-mysql/replication"
-	"github.com/siddontang/go-mysql/schema"
 )
 
 // Canal can sync your MySQL data into everywhere, like Elasticsearch, Redis, etc...
@@ -73,7 +73,7 @@ func NewCanal(cfg *Config) (*Canal, error) {
 		c.errorTablesGetTime = make(map[string]time.Time)
 	}
 	c.master = &masterInfo{}
-	
+
 	c.delay = new(uint32)
 
 	var err error

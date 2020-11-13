@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
+	"github.com/Johnson19900110/go-mysql/mysql"
+	"github.com/Johnson19900110/go-mysql/schema"
 	"github.com/pingcap/errors"
 	"github.com/shopspring/decimal"
 	"github.com/siddontang/go-log/log"
-	"github.com/siddontang/go-mysql/mysql"
-	"github.com/siddontang/go-mysql/schema"
 )
 
 type dumpParseHandler struct {
@@ -90,7 +90,7 @@ func (h *dumpParseHandler) Data(db string, table string, values []string) error 
 		} else {
 			if tableInfo.Columns[i].Type == schema.TYPE_JSON {
 				vs[i] = v
-			}else {
+			} else {
 				vs[i] = v[1 : len(v)-1]
 			}
 		}

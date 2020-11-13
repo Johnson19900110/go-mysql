@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/Johnson19900110/go-mysql/mysql"
 	"github.com/pingcap/errors"
-	"github.com/siddontang/go-mysql/mysql"
 )
 
 var ErrTableNotExist = errors.New("table is not exist")

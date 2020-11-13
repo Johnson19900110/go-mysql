@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sync"
 
-	. "github.com/siddontang/go-mysql/mysql"
+	. "github.com/Johnson19900110/go-mysql/mysql"
 )
 
 var defaultServer = NewDefaultServer()

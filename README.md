@@ -12,7 +12,7 @@ You can use it as a MySQL slave to sync binlog from master then do something, li
 
 ```go
 import (
-    "github.com/siddontang/go-mysql/replication"
+    "github.com/Johnson19900110/go-mysql/replication"
     "os"
 )
 // Create a binlog syncer with a unique server id, the server id must be different from other MySQL's. 
@@ -125,7 +125,7 @@ c.SetEventHandler(&MyEventHandler{})
 c.Start()
 ```
 
-You can see [go-mysql-elasticsearch](https://github.com/siddontang/go-mysql-elasticsearch) for how to sync MySQL data into Elasticsearch. 
+You can see [go-mysql-elasticsearch](https://github.com/Johnson19900110/go-mysql-elasticsearch) for how to sync MySQL data into Elasticsearch. 
 
 ## Client
 
@@ -135,7 +135,7 @@ Client package supports a simple MySQL connection driver which you can use it to
 
 ```go
 import (
-    "github.com/siddontang/go-mysql/client"
+    "github.com/Johnson19900110/go-mysql/client"
 )
 
 // Connect MySQL at 127.0.0.1:3306, with user root, an empty password and database test
@@ -180,7 +180,7 @@ so that most MySQL clients should be able to connect to the Server without modif
 
 ```go
 import (
-    "github.com/siddontang/go-mysql/server"
+    "github.com/Johnson19900110/go-mysql/server"
     "net"
 )
 
@@ -234,7 +234,7 @@ package main
 import (
     "database/sql"
 
-    _ "github.com/siddontang/go-mysql/driver"
+    _ "github.com/Johnson19900110/go-mysql/driver"
 )
 
 func main() {
