@@ -88,11 +88,7 @@ func (h *dumpParseHandler) Data(db string, table string, values []string) error 
 				return fmt.Errorf("parse row %v error, invalid type at %d", values, i)
 			}
 		} else {
-			if tableInfo.Columns[i].Type == schema.TYPE_JSON {
-				vs[i] = v
-			} else {
-				vs[i] = v[1 : len(v)-1]
-			}
+			vs[i] = v[1 : len(v)-1]
 		}
 	}
 
